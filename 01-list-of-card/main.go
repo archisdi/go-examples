@@ -2,14 +2,21 @@ package main
 
 func main() {
 	// var card string = "Ace of Spades"
+	// card := "Ace of Spades"
 	// card = "Five of Diamonds"
+	// card := newCard()
 
-	cards := deck{newCard(), "Ace of Diamond"}
-	cards = append(cards, "Six of Spades")
+	// cards := deck{"Ace of Diamonds", newCard()}
+	// cards = append(cards, "Six of Spades")
 
-	cards.print()
+	cards := newDeck()
+	hand, remaining := deal(cards, 5)
+
+	cards.show()
+	hand.show()
+	remaining.show()
 }
 
 func newCard() string {
-	return "Ace of Spade"
+	return "Five of Diamonds"
 }

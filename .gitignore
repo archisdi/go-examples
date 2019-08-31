@@ -15,6 +15,4 @@ storage/*
 *.njsproj
 *.sln
 
-database/config/config.json
-
 main
