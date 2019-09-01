@@ -26,7 +26,12 @@ func main() {
 
 	// save to and read from file
 	hand.saveToFile("cards")
-	newDeck := newDeckFromFile("cards")
+	loadDeck := newDeckFromFile("cards")
+	loadDeck.show()
+
+	// shuffle
+	newDeck := newDeck()
+	newDeck.shuffle()
 	newDeck.show()
 }
 
