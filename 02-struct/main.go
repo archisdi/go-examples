@@ -25,16 +25,19 @@ func main() {
 		},
 	}
 	comrade.lastName = "isdiningrat"
+
+	// turn into memory address
+	// comradePointer := &comrade
 	comrade.updateName("angga")
 	comrade.print()
 }
 
 // struct funciton receiver
-
-func (p person) updateName(name string) {
-	p.firstName = name
+// pointers, memory address to value
+func (pointer *person) updateName(name string) {
+	(*pointer).firstName = name
 }
 
-func (p person) print() {
-	fmt.Println(p)
+func (pointer person) print() {
+	fmt.Println(pointer)
 }
